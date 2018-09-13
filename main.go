@@ -16,7 +16,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
-		fmt.Fprintf(res, "hello!")
+		fmt.Fprintf(res, "hello!\n")
 	})
 
 	log.Fatal(http.ListenAndServe(*flagListen, mux))
